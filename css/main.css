@@ -1,0 +1,610 @@
+@import "http://fonts.fontstorage.com/import/gunnyrewritten.css";
+
+
+/* ------------------- reset.css ------------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong,
+sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label,
+table, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, figcaption, figure, footer, header, hgroup, menu, nav,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+	display:block;
+}
+
+/*--------------     Body & General    ------------*/
+
+body {	
+	font-family: 'Gunny Rewritten';  /* Sant-serif */
+	color: rgba(0, 0, 150, 1);
+	font-size: 1.5em;	
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.hello, .portfolio, .about-me, .opinion, .contaсt, footer {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	text-transform: none;
+	text-decoration: none;
+	transition: 0.3s linear;
+	color: rgba(255, 255, 255, 1);
+	font-size: 1.5rem;
+}
+
+a:hover {
+color: rgba(0, 170, 170, 1);
+}
+
+h1 {	
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: rgba(0, 170, 170, 1);
+}
+
+h2 {
+	padding-top: 70px;
+	font-size: 1.7em;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(0, 170, 170, 1);
+}
+
+.h3 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.sector-buttons {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.hello-button {
+	height: 40px;
+	width: 250px;
+	margin: 20px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	border-radius: 25px;
+	border: 1px solid rgba(119, 136, 153, 1);
+	background: rgba(119, 136, 153, 1);
+	text-align: center;
+	font-weight: bold;
+}
+
+.round {
+	width: 50px;
+}
+
+a .hello-button:hover {
+	background: rgba(180, 180, 180, 1);
+	color: rgba(0, 170, 170, 1);
+	transition: 0.3s linear;
+}
+
+/*---------------------- Header --------------------*/
+
+.wrapper-header {
+	width: 100%;
+
+	position: fixed;
+	z-index: 5;		
+}
+
+header {
+	height: 60px;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+	width: 100%;
+	max-width: 1190px;
+	margin: 0 auto;
+}
+
+.logo-galf {
+	width: 100px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+header .container nav {
+	max-width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+header .container nav ul li {
+	display: inline-block;
+	list-style:none;
+	margin: 10px;
+}
+
+li.end {
+	padding-right: 30px;
+}
+
+
+/*-------------------------- Main    ----------------*/
+
+/*-------------------------- Hello   ----------------*/
+
+.wrapper-hello {
+	background: url(../img/BgrHello2.jpg) no-repeat;	
+	height: 706px;
+	padding-top: 60px;
+}
+
+.wrapper-hello .inner-hello {
+	background-color: rgba(0, 0, 0, 0.5);	
+	filter:alpha(opacity=50);    /* в Internet Explorer */	
+}
+
+.hello {	
+	height: 706px;	
+	color: rgba(0, 0, 150, 1);	
+}
+
+.hello h1 {
+	padding-top: 150px;	
+}
+
+.hello h2 {
+	padding-top: 90px;
+	padding-bottom: 50px;
+}
+
+.hello a .hello-button {
+	margin: 0 auto 40px;
+}
+	
+
+.hello a .hello-button .round {
+
+}
+
+
+/*------------------------ Portfolio   ----------------*/
+
+.wrapper-portfolio {
+	background: rgba(230, 230, 230, 1);
+}
+
+.portfolio {
+	
+}
+
+.works {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 1);
+
+}
+
+.work {
+	width: 25%;
+	margin: 10px;
+	border: 1px #778899 solid;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px #778899;
+	background: rgba(230, 230, 230, 1);
+	text-align: center;
+}
+
+.work:hover {
+	box-shadow: 5px 5px 6px #778899;
+	background: rgba(255, 255, 255, 1);
+}
+
+.work a {	
+	color: rgba(0, 0, 150, 1);
+}
+
+.work-img {
+	width: 90px;
+	margin: 10px auto 0;
+}
+
+.modal-work {
+	width: 500px; 
+	height: 500px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 5px;
+	border: 3px #778899 solid;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: 25%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 50%; /* пoлoвинa экрaнa слевa */
+	margin-top: -250px;
+	margin-left: -250px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+	align-content: center;
+}
+/* Кнoпкa зaкрыть #modal-work1  */
+#modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.5; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.5; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=50);
+	width:100%; 
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.div-modal-img {
+	margin: 0 37%;	
+}
+
+.modal-img {
+	width: 150px;
+}
+
+.padding {
+	content: "";
+	height: 60px;
+}
+
+
+/*------------------------ slider   ----------------*/
+
+.single-slide {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: rgba(119, 136, 153, 1);
+}
+
+.sl-main {
+	width: 100%;
+	max-width: 1000px;
+	background: rgba(119, 136, 153, 1);
+	margin: 0 auto;
+	font-size: 0.7em;
+	color: #fff;
+
+}
+
+.sl-main div {
+	padding: 5px 0 5px 0px;
+	align-content: center;
+	text-align: center;
+}
+
+.sl-img {
+	height: 50px;
+	margin: 0 auto;
+}
+
+
+/*------------------------ About me   ----------------*/
+
+.wrapper-about {
+	
+}
+
+.about-main {
+	
+	background: url(../img/About-me.jpg) no-repeat;	
+	height: 500px;
+}
+
+.about-img {
+	position: relative;
+	float: left;
+	width: 37%;
+	min-width: 370px;
+	top: 10px;
+	left: 20px;
+	padding: 10px;
+	border: solid 1px #000;
+	background: rgba(230, 230, 230, 0.8);
+}
+
+.about-txt {
+	position: relative;
+	float: left;
+	width: 57%;
+	min-width: 470px;
+	top: 10%;
+	left: 1%;
+	padding: 10px;
+	border: solid 1px #000;
+	background: rgba(230, 230, 230, 0.8);
+}
+
+.about-me h2 {
+	padding-top: 10px;
+}
+
+/*------------------------  Opinion  ----------------*/
+
+.wrapper-opinion {
+	background: rgba(230, 230, 230, 1);
+}
+
+.opinion {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: rgba(230, 230, 230, 1);
+	text-align: center;
+}
+
+
+.opinion p a {
+	color: rgba(119, 136, 153, 1);
+}
+
+.opinion p a:hover {
+	color: rgba(0, 170, 170, 1);
+	text-decoration: underline #778899;
+}
+
+.block-opinion {
+
+}
+
+.sl-opinion {
+	width: 100%;
+	max-width: 1100px;
+	margin: 10px auto;
+	font-size: 0.7em;
+}
+
+.sl-personal {
+	width: 30%;
+	padding: 10px;
+	background: rgba(230, 230, 230, 1);
+	text-align: center;
+}
+
+.img-personal {
+	width: 130px;
+	padding: 5px 10px;
+	float: left;
+}
+
+/*------------------------ Contact   ----------------*/
+
+.wrapper-contact {
+	height: 500px;	
+}
+
+.contaсt {
+	position: relative;
+	perspective: 1000px;
+}
+
+.contaсt h2 {
+	padding-bottom: 30px;
+}
+
+.mobile-img {
+	margin: 20px 0;
+}
+
+.mobile-img table {
+	width: 360px;
+	font-weight: bold;
+}
+
+td.left {
+	width: 60px;
+	text-align: center;
+}
+
+td.center {
+	width: 150px;
+	text-align: right;
+}
+
+td.right {
+	width: 150px;
+	text-align: right;
+}
+
+.img-simbol{
+	height: 25px;
+	margin: 0 auto;	
+}
+
+.visitcard {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: rotateX(55deg) rotateY(10deg) rotateZ(-45deg);
+	
+	background: rgba(0, 170, 170, 1);
+	text-align: center;
+	padding: 30px 30px;
+	margin: 10px;
+	border: solid 1px #fff;
+
+}
+
+/*-------------------------- Footer   ----------------*/
+
+.wrapper-footer {	
+	background: rgba(119, 136, 153, 1);
+	color: rgba(225, 225, 225, 1);
+}
+
+footer {
+	
+}
+
+.footer-inner {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: stretch;
+}
+
+.logo {
+	width: 50%;
+	padding: 5px;
+}
+
+.logo .logo-galf {
+	padding: 20px 10px;
+}
+
+.menu {
+	width: 20%;
+	padding: 5px;	
+}
+
+ul li {
+	list-style: none;
+	text-align: center;
+	border-radius: 25px;
+}
+
+.li-foot:hover {
+	background: rgba(180, 180, 180, 1);	
+	transition: 0.3s linear;
+
+}
+
+.items {
+	width: 20%;
+	padding: 5px;
+}
+
+/*----------------------- Footer-out   ----------------*/
+
+.footer-out {
+	display: block;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: rgba(0, 0, 0, 1);
+	color: rgba(225, 225, 225, 1);
+	text-align: center;
+	font-size: 1rem;
+}
+
+
+/*------------------------- @media ------------------------*/
+
+@media screen and (max-width: 1200px) {
+
+	body {
+		font-size: 1.4em;
+	}
+
+	a {
+		font-size: 1.4rem;
+	}
+
+	.hello, .portfolio, .about-me, .opinion, .contaсt, footer {
+		padding-left: 10px;
+	}
+
+	header nav {
+	max-width: 87%;
+	}
+
+}
+
+
+@media screen and (max-width: 991.98px) {
+	body {
+		font-size: 1.3em;
+	}
+
+	a {
+		font-size: 1.3rem;
+	}
+
+	.hello-button {
+	height: 40px;
+	width: 230px;
+	}
+
+	.round {
+	width: 50px;
+	}
+}
+
+
+@media screen and (max-width: 767.98px) {
+
+	body {
+		font-size: 1.2em;
+	}
+
+	a {
+		font-size: 1.2rem;
+	}
+
+	.hello-button {
+	height: 40px;
+	width: 190px;
+	}
+
+	.round {
+	width: 50px;
+	}
+
+	.wrapper-contact {
+    height: 450px;
+	}
+
+	.visitcard{
+		visibility: hidden;
+	}
+
+	.mobile-img {
+		margin: 10px 25%;
+	}
+
+}
+
+
+@media screen and (max-width: 575.98px) {
+
+}
